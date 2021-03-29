@@ -14,21 +14,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 @SuppressWarnings("unchecked")
-public class test extends enablers {
+public class articlesTestNg extends enablers {
 
     //Checks articles individual ID's.
     @Test(dataProvider = "getId")
-    public void TestAllArticles(String articles) {
+    public void TestAllArticles(String articlesId) {
 
         given().
                 given().log().all().and().
-                pathParam("id", articles).
+                pathParam("id", articlesId).
                 when().
                 get(singleArticles).
                 then().
                 assertThat().
                 statusCode(200).
-                body(("id"), equalTo(articles));
+                body(("id"), equalTo(articlesId));
     }
 
     //Checks the whole content of the json file using an expected outcome in the project structure.
