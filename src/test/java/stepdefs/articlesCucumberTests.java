@@ -4,8 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.matcher.RestAssuredMatchers;
 import io.restassured.response.Response;
-
 
 
 import org.testng.Assert;
@@ -33,27 +33,24 @@ public class articlesCucumberTests extends enablers {
     @Test(dataProvider = "getId")
     @When("I get an the article ID")
     public void i_get_an_the_article_id(String articlesId) {
-        given().
+
+        response = given().
                 log().all().and().
                 pathParam("id", articlesId).
                 when().
-                get(singleArticles);
+                get(singleArticles).
+                then().extract().response();
 
     }
+
     @Test(dataProvider = "getId")
     @Then("I will receive an individual article")
-    public void i_will_receive_an_individual_article(String articlesId, String body) {
-//        Assert.assertEquals( body.equals("id"), articlesId);
+    public void i_will_receive_an_individual_article(String articlesId) {
 
-        given().
-                given().log().all().and().
-                pathParam("id", articlesId).
-                when().
-                get(singleArticles).
-                then().
-                assertThat().
-                statusCode(200).
-                body(("id"), equalTo(articlesId));
+
+
+        Assert.assertEquals(200,response.getStatusCode());
+        Assert.assertEquals("",response.jsonPath());
 
     }
 
@@ -68,6 +65,7 @@ public class articlesCucumberTests extends enablers {
     public void i_get_the_list_of_articles() {
 
     }
+
     @Test
     @Then("It will match the json file")
     public void it_will_match_the_json_file() {

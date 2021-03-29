@@ -21,13 +21,13 @@ public class articlesTestNg extends enablers {
     public void TestAllArticles(String articlesId) {
 
         given().
-                given().log().all().and().
                 pathParam("id", articlesId).
                 when().
                 get(singleArticles).
                 then().
                 assertThat().
                 statusCode(200).
+                //asserting that the body id injected from the data provider equals the actual api ID response.
                 body(("id"), equalTo(articlesId));
     }
 
