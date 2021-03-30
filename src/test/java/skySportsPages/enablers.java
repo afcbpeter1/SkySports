@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 public class enablers {
 
     // Strings to be able to change in one place rather than paste them in to each individual test.
-    public String singleArticles = "https://5f99522350d84900163b8737.mockapi.io/tech-test/articles/{id}";
+    public String singleArticles = "https://5f99522350d84900163b8737.mockapi.io/tech-test/articles";
     public String allArticles = "https://5f99522350d84900163b8737.mockapi.io/tech-test/articles";
     public String pathJson = "src/test/java/jsonFiles/articles.json";
     String deleteArticle = "https://5f99522350d84900163b8737.mockapi.io/tech-test/articles";

@@ -19,7 +19,11 @@
 
     </properties>
     <dependencies>
-
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>3.0.0-M5</version>
+        </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>

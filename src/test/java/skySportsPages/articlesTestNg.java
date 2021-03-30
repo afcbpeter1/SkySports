@@ -41,9 +41,10 @@ public class articlesTestNg extends enablers {
                 get(allArticles).
                 then().
                 assertThat().
-                statusCode(200).
+                contentType(ContentType.JSON).
                 and().
-                body("", hasItem(expectedJson.getMap("")));
+                body("", hasItem(expectedJson.getList("")));
+        System.out.println("Expected " + expectedJson.getList(""));
     }
 
 // I wanted to see what the output was for the below.
