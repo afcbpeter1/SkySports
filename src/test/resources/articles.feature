@@ -14,7 +14,7 @@ Scenario Outline: Receiving an article by it's ID
   | 5 |
 
 
-#  Scenario: Receiving a list of articles
-#    Given I have a set of articles
-#    When I get the list of articles
-#    Then It will match the json file
+  Scenario: Receiving a list of articles
+    Given I have a set of articles
+    When I get the list of articles
+    Then It will match the json file
