@@ -16,11 +16,11 @@ public class enablers {
     @DataProvider(name = "getId")
     public Object[][] getData() {
         return new Object[][]{
-                {"1"},
-                {"2"},
-                {"3"},
-                {"4656364867443"},
-                {"5"},
+                {"1", 89},
+                {"2", 45},
+                {"3", 25},
+                {"4656364867443", 0},
+                {"5", 56},
 
 
         };

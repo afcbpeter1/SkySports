@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.matcher.RestAssuredMatchers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -58,7 +59,7 @@ public class articlesCucumberTests extends enablers {
 
     @Given("I have a set of articles")
     public void i_have_a_set_of_articles() {
-        JsonPath expectedJson = new JsonPath(new File(pathJson));
+
         baseURI = singleArticles;
     }
 
@@ -70,9 +71,18 @@ public class articlesCucumberTests extends enablers {
                 then().extract().response();
     }
 
-    @Then("It will match the json file")
-    public void it_will_match_the_json_file(String expectedId) {
-        Object obj = expectedId;
-        Assert.assertEquals(obj, response.jsonPath().get(""));
-    }
+//    @Then("It will match the json file")
+//    public void it_will_match_the_json_file(String expectedId) {
+//        JsonPath expectedJson = new JsonPath(new File(pathJson));
+//        Object obj = expectedId;
+//        Assert.assertEquals(obj, hasItem(expectedJson.getList("")));
+//    }
+@Then("It will match the json file")
+public void it_will_match_the_json_file() {
+    JsonPath expectedJson = new JsonPath(new File(pathJson));
+
+    Assert.assertEquals("", hasItem(expectedJson.getList("")));
+}
+
+
 }

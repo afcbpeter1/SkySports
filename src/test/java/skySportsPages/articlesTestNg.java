@@ -18,7 +18,7 @@ public class articlesTestNg extends enablers {
 
     //Checks articles individual ID's.
     @Test(dataProvider = "getId")
-    public void TestAllArticles(String articlesId) {
+    public void TestAllArticles(String articlesId, int priority) {
 
         given().
                 pathParam("id", articlesId).
@@ -28,7 +28,7 @@ public class articlesTestNg extends enablers {
                 assertThat().
                 statusCode(200).
                 //asserting that the body id injected from the data provider equals the actual api ID response.
-                body(("id"), equalTo(articlesId));
+                body(("id"), equalTo(priority));
     }
 
     //Checks the whole content of the json file using an expected outcome in the project structure.
