@@ -1,0 +1,6 @@
+1. Clone https://github.com/afcbpeter1/skysports.git in to Intellij.
+2. Right click on the POM file and reload the project.
+3. Check settings and run Java version 14.
+4. Open the resources folder and run the articles.feature file.
+5. When test run is complete view the cucumber report produced in the output.
+

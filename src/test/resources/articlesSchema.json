@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sensitive": {
+          "type": "boolean"
+        },
+        "topics": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "image": {
+          "type": "null"
+        },
+        "priority": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "title",
+        "sensitive",
+        "topics",
+        "image",
+        "priority"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sensitive": {
+          "type": "boolean"
+        },
+        "topics": {
+          "type": "array",
+          "items": {}
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "fileType": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "fileType"
+          ]
+        },
+        "priority": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "title",
+        "sensitive",
+        "topics",
+        "image",
+        "priority"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sensitive": {
+          "type": "boolean"
+        },
+        "topics": {
+          "type": "array",
+          "items": {}
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "fileType": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "fileType"
+          ]
+        },
+        "priority": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "title",
+        "sensitive",
+        "topics",
+        "image",
+        "priority"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sensitive": {
+          "type": "boolean"
+        },
+        "topics": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "image": {
+          "type": "object"
+        },
+        "priority": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "title",
+        "sensitive",
+        "topics",
+        "image",
+        "priority"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sensitive": {
+          "type": "boolean"
+        },
+        "topics": {
+          "type": "array",
+          "items": {}
+        },
+        "image": {
+          "type": "object"
+        },
+        "priority": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "title",
+        "sensitive",
+        "topics",
+        "image",
+        "priority"
+      ]
+    }
+  ]
+}
